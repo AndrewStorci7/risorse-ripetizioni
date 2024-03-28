@@ -2,7 +2,7 @@
 
 ### Indice:
 
-- [Introudizione](#introduzione)
+- [Introduzione](#introduzione)
 - [C-Stringhe](#c-string-array-di-caratteri)
 - [Classe string](#string-classe)
 
