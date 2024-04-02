@@ -4,7 +4,7 @@
 using namespace std;
 
 void calcolaDannoPerValore(int);
-void calcolaDannoPerRiferimento(int &);
+void calcolaDannoPerRiferimento(int&);
 void calcolaDannoPerPuntatore(int *);
 
 int main() {
