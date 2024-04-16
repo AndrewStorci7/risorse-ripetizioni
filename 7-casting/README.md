@@ -6,6 +6,7 @@
     - [Casting Statico](#casting-statico)
     - [Casting Dinamico](#casting-dinamico)
     - [Casting di Reinterpretazione](#casting-di-reinterpretazione)
+    - [Casting Implicito vs. Casting Esplicito]()
 - [Conclusioni](#conclusioni)
     - [Vantaggi](#vantaggi)
     - [Svantaggi](#svantaggi)
@@ -55,6 +56,40 @@ Questo tipo di casting consente di interpretare i bit di memoria di un oggetto i
 int numero = 65;
 char carattere = reinterpret_cast<char>(numero);
 ```
+
+### Casting Implicito vs. Casting Esplicito
+
+#### Casting Esplicito:
+
+Il casting esplicito è quando il programmatore dichiara esplicitamente l'intenzione di convertire un tipo di dato in un altro. Questo viene fatto utilizzando gli operatori di casting appropriati come `static_cast`, `dynamic_cast`, `reinterpret_cast` o `const_cast`.
+
+```cpp
+int numIntero = 10;
+double numDouble = static_cast<double>(numIntero);
+```
+
+Nell'esempio sopra, il cast da `int` a `double` è esplicitamente indicato dall'uso di `static_cast`, il che rende chiaro che il programmatore è consapevole della conversione e la sta richiedendo attivamente.
+
+Il casting esplicito offre maggiore chiarezza nel codice e rende evidenti le conversioni di tipo, aiutando così a prevenire errori di interpretazione.
+
+#### Castin Implicito:
+
+Il casting implicito, al contrario, avviene automaticamente dal compilatore senza richiesta esplicita del programmatore. Si verifica quando viene eseguita una conversione di tipo in modo implicito in determinate situazioni, ad esempio durante le operazioni aritmetiche o di assegnazione.
+
+```cpp
+int numIntero = 10;
+double numDouble = numIntero; // Conversione implicita da int a double
+```
+
+Nell'esempio sopra, il compilatore esegue una conversione implicita dal tipo `int` al tipo `double` durante l'assegnazione della variabile numIntero alla variabile `numDouble`. Questo avviene perché il compilatore è in grado di gestire la conversione senza indicazioni esplicite da parte del programmatore.
+
+Il casting implicito può essere comodo in molte situazioni, ma può anche portare a errori se non tenuto in considerazione. Può anche rendere il codice meno chiaro poiché le conversioni di tipo avvengono senza essere facilmente individuabili.
+
+#### Considerazioni
+
+- Il casting esplicito è preferibile quando si desidera rendere chiara la conversione di tipo e quando si desidera essere sicuri che la conversione avvenga come previsto.
+- Il casting implicito può essere comodo ma potenzialmente rischioso se non considerato attentamente, specialmente in situazioni complesse o ambigue.
+- È importante comprendere quando avviene il casting implicito e quando è meglio utilizzare il casting esplicito per mantenere il codice chiaro e sicuro.
 
 ## Conclusioni
 
