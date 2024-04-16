@@ -1,4 +1,4 @@
-# Lezione (o diagrammi a blocchi)
+# Lezione Casting
 
 ## Indice
 - [Introduzione](#introduzione)
@@ -6,7 +6,7 @@
     - [Casting Statico](#casting-statico)
     - [Casting Dinamico](#casting-dinamico)
     - [Casting di Reinterpretazione](#casting-di-reinterpretazione)
-    - [Casting Implicito vs. Casting Esplicito]()
+    - [Casting Implicito vs. Casting Esplicito](#casting-implicito-vs-casting-esplicito)
 - [Conclusioni](#conclusioni)
     - [Vantaggi](#vantaggi)
     - [Svantaggi](#svantaggi)
