@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -7,7 +8,7 @@ int main() {
     // CASTING STATICO
 
     int punteggioIntero = 1000;
-    double punteggioFloat = static_cast<double>(punteggioIntero) / 10.0;
+    double punteggioDouble = static_cast<double>(punteggioIntero) / 10.0;
 
     // CASTING DINAMICO
 
@@ -15,13 +16,13 @@ int main() {
     class Giocatore : public Personaggio {};
     class NonGiocatore : public Personaggio {};
 
-    Personaggio* personaggioPtr = ...; // Puntatore a un personaggio
-    Giocatore* giocatorePtr = dynamic_cast<Giocatore*>(personaggioPtr);
-    if (giocatorePtr) {
+    // Personaggio* personaggioPtr = new Personaggio(); // Puntatore a un personaggio
+    // Giocatore* giocatorePtr = dynamic_cast<Giocatore*>(personaggioPtr);
+    // if (giocatorePtr) {
         // Il personaggio è un giocatore
-    } else {
+    // } else {
         // Il personaggio è un non giocatore
-    }
+    // }
 
     // CASTING DI REINTERPRETAZIONE
 
@@ -30,7 +31,30 @@ int main() {
         int puntiDanno;
     };
 
-    char* buffer = ...; // Buffer di dati grezzi
-    DatiGiocatore* giocatoreData = reinterpret_cast<DatiGiocatore*>(buffer);
+    // char* buffer = ...; // Buffer di dati grezzi
+    // DatiGiocatore* giocatoreData = reinterpret_cast<DatiGiocatore*>(buffer);
+
+
+    int num1 = 10;
+    int num2 = 7;
+
+    int res = num1 / num2;
+    float res2 = (float) num1 / num2;
+
+    cout << "risultato intero: " << res << endl;
+    cout << "risultato double: " << res2 << endl;
+
+    int prova = 30;
+    double d = 40.68;
+    string s = to_string(d); // string to int
+    string s2 = d;
+
+    string ss = "Ciao mondo";
+    // string::size_type size;
+
+    cout << "stringa: " << s << endl;
+    cout << "stringa2: " << s2 << endl;
+
+
 
 }
